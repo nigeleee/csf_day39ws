@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{{character.imageUrl}}" class="card-img-top" alt="Character Image">
+        <div class="card-body">
+          <h5 class="card-title">{{character.name}}</h5>
+          <p><small>ID: {{character.id}}</small></p>
+          <p>{{character.description}}</p>
+          <label><strong>Enter Your comments</strong></label>
+          <form class="form-group" [formGroup]="form" (ngSubmit)="post()">
+            <textarea class="form-control" formControlName="input" ></textarea>
+            <div class="mt-3">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
